@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>World Cup Component</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    h1 {
+      color: red !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <app-matches-by-country country="ger">
+    <span>Hallo Elements</span>
+  </app-matches-by-country>
+  <hr>
+  <app-matches-today></app-matches-today>
+
+
+</body>
+
+<script>
+
+  setTimeout(() => {
+    const foo = document.createElement('app-matches-by-country');
+    document.body.appendChild(foo);
+    foo.setAttribute('country', 'sui');
+
+  }, 1000);
+</script>
+
+</html>

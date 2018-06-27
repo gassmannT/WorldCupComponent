@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>World Cup Elements</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+    </style>
+    <script>
+        function changeCountry() {
+            let countryCode = document.getElementById('countryCode').value;
+            let ce = document.getElementById('matchedByCountry');
+            ce.country = countryCode;
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="countryCode" value="sui">
+    <button onclick="changeCountry()">Search</button>
+
+    <app-matches-by-country id="matchedByCountry" country="sui"></app-matches-by-country>
+    <hr>
+    <app-matches-today></app-matches-today>
+    <script src="../elements/world-cup.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+mat-card {
+  display: inline-block !important;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}

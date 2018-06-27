@@ -1,0 +1,20 @@
+<h1>Matches for {{ country }}</h1>
+<!-- <mat-card *ngFor="let match of matches$ | async">
+    <mat-card-title>{{ match.home_team.country }} vs. {{ match.away_team.country }}</mat-card-title>
+    <mat-card-content>in {{ match.venue }} at {{ match.datetime | date: 'dd.MM.yyyy HH:mm'}}
+        <br />
+        <span *ngIf="match.status !== 'future'" [class.active]="match.status === 'running'">Result: {{ match.winner }}</span>
+    </mat-card-content>
+</mat-card> -->
+
+<mat-card *ngFor="let match of matches">
+    <mat-card-title>{{ match.home_team.country }} vs. {{ match.away_team.country }}</mat-card-title>
+    <mat-card-content>in {{ match.venue }} at {{ match.datetime | date: 'dd.MM.yyyy HH:mm'}}
+        <br />
+        <span *ngIf="match.status !== 'future'" [class.active]="match.status === 'running'">Result: {{ match.winner }}</span>
+    </mat-card-content>
+</mat-card>
+<div>
+    {{ matches.length }} matches found
+</div>
+<ng-content></ng-content>
